@@ -21,7 +21,7 @@ namespace VirtualTradeSystem
             this.SetDealButton.Click += SetDealButtonClick;
             this.CalculatePVButton.Click += CalculatePVButtonClick;
 
-            var deal = new Deal
+            var deal = new DealModel
             {
                 TradeDate = DateTime.Parse("2020/1/1"),
                 StartDate = DateTime.Parse("2020/1/1"),
@@ -29,17 +29,17 @@ namespace VirtualTradeSystem
                 IsBuy = true,
                 Strike = 100,
                 DealType = EDealType.Call,
-                Lot = 1
+                Lot = 1,
+                InitialPremium = 0
             };
 
-
             
+
             positionBindingSource.DataSource = _viewModel.Row;
             dealBindingSource.DataSource = _viewModel.RowTemp;
 
             //ここでなぜ問題が生じるが、bindingListで実施できた。
             _viewModel.Row.Add(deal);
-
         }
 
         private void SetDealButtonClick(object sender, EventArgs e)

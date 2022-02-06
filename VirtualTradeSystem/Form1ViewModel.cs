@@ -12,36 +12,47 @@ namespace VirtualTradeSystem
 {
     public class Form1ViewModel : ViewModelBase
     {
-        
-        BindingList<Deal> row = new BindingList<Deal>();
-        public BindingList<Deal> Row
+        public BindingList<DealModel> Row { get; set; } = new BindingList<DealModel>();
+        /*
+        public BindingList<DealModel> Row
         {
-
             get { return row; }
-            //set { }
+            
             set { SetProperty(ref row, value); }
-        }
+        }*/
 
+        //public BindingList<DealModel> Row { get; set; } = new BindingList<DealModel>();
 
-        BindingList<Deal> rowTemp = new BindingList<Deal>();
-        public BindingList<Deal> RowTemp
+        public BindingList<DealModel> RowTemp { get; set; } = new BindingList<DealModel>();
+
+        /*
+        List<DealModel> row = new List<DealModel>();
+        public List<DealModel> Row
+        {
+            get { return row; }
+            set { SetProperty(ref row, value); }
+        }*/
+
+        /*
+        List<DealModel> rowTemp = new List<DealModel>();
+        public List<DealModel> RowTemp
         {
 
             get { return rowTemp; }
-            //set { }
             set { SetProperty(ref rowTemp, value); }
-        }
-
+        }*/
+        
         public void SetDealAction()
         {
             RowTemp.Clear();
+            //Clone しないと同じところで更新される。
             foreach (var item in Row)
             {
-                RowTemp.Add(item);
+                RowTemp.Add((DealModel)item.Clone());
             }
         }
 
-        
+
 
         //RowTempのPV計算を行う
         public void CalculatePVAction()
@@ -54,11 +65,15 @@ namespace VirtualTradeSystem
                 FxVolatility = 0.01
             };
 
+            double test = 0;
             foreach(var deal in RowTemp)
             {
-                var test = BlackScholes.Pv(deal, market);
+                test = BlackScholes.Pv(deal, market);
                 deal.InitialPremium = BlackScholes.Pv(deal, market);
             }
+
+            //RowTemp.Add(new DealModel { InitialPremium = test });
+
 
         }
     }

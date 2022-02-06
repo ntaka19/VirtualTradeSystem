@@ -3,13 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31702.278
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VirtualTradeSystem", "VirtualTradeSystem\VirtualTradeSystem.csproj", "{04691B64-709D-4C3C-A315-7D60FE9006BB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VirtualTradeSystem.Form", "VirtualTradeSystem\VirtualTradeSystem.Form.csproj", "{04691B64-709D-4C3C-A315-7D60FE9006BB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VirtualTradeSystem.Core", "VirtualTradeSystem.Core\VirtualTradeSystem.Core.csproj", "{9419FB28-F433-47E0-B4F8-34ED3AA73C7A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VirtualTradeSystem.Data", "VirtualTradeSystem.Data\VirtualTradeSystem.Data.csproj", "{4A722167-7B20-4B10-8BC3-628A1A76A3F8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Numeric", "Numeric\Numeric.csproj", "{1CEBDE44-6566-4001-81DE-42F6B3D89C4C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Integration", "Integration\Integration.csproj", "{AA850BEF-5EC7-4666-B2A4-BC3D8B884A2C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VirtualTradeSystem.Web", "VirtualTradeSystem.Web\VirtualTradeSystem.Web.csproj", "{468D3C61-A290-4A8C-9E72-0848FCC7FFA9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{1CEBDE44-6566-4001-81DE-42F6B3D89C4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1CEBDE44-6566-4001-81DE-42F6B3D89C4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1CEBDE44-6566-4001-81DE-42F6B3D89C4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA850BEF-5EC7-4666-B2A4-BC3D8B884A2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA850BEF-5EC7-4666-B2A4-BC3D8B884A2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA850BEF-5EC7-4666-B2A4-BC3D8B884A2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA850BEF-5EC7-4666-B2A4-BC3D8B884A2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{468D3C61-A290-4A8C-9E72-0848FCC7FFA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{468D3C61-A290-4A8C-9E72-0848FCC7FFA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{468D3C61-A290-4A8C-9E72-0848FCC7FFA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{468D3C61-A290-4A8C-9E72-0848FCC7FFA9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
