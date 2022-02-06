@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using VirtualTradeSystem.Core;
+using VirtualTradeSystem.Data;
 
 namespace VirtualTradeSystem
 {
@@ -39,9 +41,24 @@ namespace VirtualTradeSystem
             }
         }
 
+        
+
         //RowTempのPV計算を行う
         public void CalculatePVAction()
         {
+            var market = new Market()
+            {
+                FxRate = 90,
+                IrRateDom = 0.01,
+                IrRateFor = 0.01,
+                FxVolatility = 0.01
+            };
+
+            foreach(var deal in RowTemp)
+            {
+                var test = BlackScholes.Pv(deal, market);
+                deal.InitialPremium = BlackScholes.Pv(deal, market);
+            }
 
         }
     }

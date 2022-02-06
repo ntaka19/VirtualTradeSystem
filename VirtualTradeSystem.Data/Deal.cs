@@ -7,7 +7,7 @@ namespace VirtualTradeSystem
         //あとでenumにする。
         public string ID { get; set; }
         public EnumStatus Status { get; set; }
-        public EnumDealType DealType { get; set; }
+        public EDealType DealType { get; set; }
         public double Strike { get; set; }
         //public double Maturity { get;  set; }
 
@@ -44,7 +44,7 @@ namespace VirtualTradeSystem
         Closed,
     }
 
-    public enum EnumDealType
+    public enum EDealType
     {
         Call,
         Put,

@@ -83,6 +83,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\VirtualTradeSystem.Core\VirtualTradeSystem.Core.csproj">
+      <Project>{9419fb28-f433-47e0-b4f8-34ed3aa73c7a}</Project>
+      <Name>VirtualTradeSystem.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\VirtualTradeSystem.Data\VirtualTradeSystem.Data.csproj">
       <Project>{4a722167-7b20-4b10-8bc3-628a1a76a3f8}</Project>
       <Name>VirtualTradeSystem.Data</Name>

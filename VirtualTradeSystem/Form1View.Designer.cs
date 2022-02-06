@@ -35,24 +35,27 @@ namespace VirtualTradeSystem
             this.DGVIndications = new System.Windows.Forms.DataGridView();
             this.dealBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.positionBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tradeDatedataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dealTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.isBuyDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.lotDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.startDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.strikeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.InitialPremium = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CalculatePVButton = new System.Windows.Forms.Button();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EndDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tradeDatedataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dealTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.isBuyDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.lotDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.startDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.strikeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.InitialPremium = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DGVTrades)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGVIndications)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dealBindingSource)).BeginInit();
@@ -70,6 +73,7 @@ namespace VirtualTradeSystem
             this.isBuyDataGridViewCheckBoxColumn,
             this.lotDataGridViewTextBoxColumn,
             this.startDateDataGridViewTextBoxColumn,
+            this.dataGridViewTextBoxColumn9,
             this.strikeDataGridViewTextBoxColumn,
             this.statusDataGridViewTextBoxColumn,
             this.InitialPremium});
@@ -101,6 +105,7 @@ namespace VirtualTradeSystem
             this.dataGridViewCheckBoxColumn1,
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5,
+            this.EndDate,
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8});
@@ -120,71 +125,14 @@ namespace VirtualTradeSystem
             // 
             this.positionBindingSource.DataSource = typeof(VirtualTradeSystem.Deal);
             // 
-            // iDDataGridViewTextBoxColumn
+            // CalculatePVButton
             // 
-            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.iDDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
-            this.iDDataGridViewTextBoxColumn.Width = 50;
-            // 
-            // tradeDatedataGridViewTextBoxColumn
-            // 
-            this.tradeDatedataGridViewTextBoxColumn.DataPropertyName = "TradeDate";
-            this.tradeDatedataGridViewTextBoxColumn.HeaderText = "TradeDate";
-            this.tradeDatedataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.tradeDatedataGridViewTextBoxColumn.Name = "tradeDatedataGridViewTextBoxColumn";
-            // 
-            // dealTypeDataGridViewTextBoxColumn
-            // 
-            this.dealTypeDataGridViewTextBoxColumn.DataPropertyName = "DealType";
-            this.dealTypeDataGridViewTextBoxColumn.HeaderText = "DealType";
-            this.dealTypeDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.dealTypeDataGridViewTextBoxColumn.Name = "dealTypeDataGridViewTextBoxColumn";
-            // 
-            // isBuyDataGridViewCheckBoxColumn
-            // 
-            this.isBuyDataGridViewCheckBoxColumn.DataPropertyName = "IsBuy";
-            this.isBuyDataGridViewCheckBoxColumn.HeaderText = "IsBuy";
-            this.isBuyDataGridViewCheckBoxColumn.MinimumWidth = 8;
-            this.isBuyDataGridViewCheckBoxColumn.Name = "isBuyDataGridViewCheckBoxColumn";
-            this.isBuyDataGridViewCheckBoxColumn.Width = 50;
-            // 
-            // lotDataGridViewTextBoxColumn
-            // 
-            this.lotDataGridViewTextBoxColumn.DataPropertyName = "Lot";
-            this.lotDataGridViewTextBoxColumn.HeaderText = "Lot";
-            this.lotDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.lotDataGridViewTextBoxColumn.Name = "lotDataGridViewTextBoxColumn";
-            this.lotDataGridViewTextBoxColumn.Width = 50;
-            // 
-            // startDateDataGridViewTextBoxColumn
-            // 
-            this.startDateDataGridViewTextBoxColumn.DataPropertyName = "StartDate";
-            this.startDateDataGridViewTextBoxColumn.HeaderText = "StartDate";
-            this.startDateDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.startDateDataGridViewTextBoxColumn.Name = "startDateDataGridViewTextBoxColumn";
-            // 
-            // strikeDataGridViewTextBoxColumn
-            // 
-            this.strikeDataGridViewTextBoxColumn.DataPropertyName = "Strike";
-            this.strikeDataGridViewTextBoxColumn.HeaderText = "Strike";
-            this.strikeDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.strikeDataGridViewTextBoxColumn.Name = "strikeDataGridViewTextBoxColumn";
-            // 
-            // statusDataGridViewTextBoxColumn
-            // 
-            this.statusDataGridViewTextBoxColumn.DataPropertyName = "Status";
-            this.statusDataGridViewTextBoxColumn.HeaderText = "Status";
-            this.statusDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
-            // 
-            // InitialPremium
-            // 
-            this.InitialPremium.DataPropertyName = "InitialPremium";
-            this.InitialPremium.HeaderText = "InitialPremium";
-            this.InitialPremium.MinimumWidth = 8;
-            this.InitialPremium.Name = "InitialPremium";
+            this.CalculatePVButton.Location = new System.Drawing.Point(747, 565);
+            this.CalculatePVButton.Name = "CalculatePVButton";
+            this.CalculatePVButton.Size = new System.Drawing.Size(93, 26);
+            this.CalculatePVButton.TabIndex = 6;
+            this.CalculatePVButton.Text = "Calculate PV";
+            this.CalculatePVButton.UseVisualStyleBackColor = true;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -231,6 +179,13 @@ namespace VirtualTradeSystem
             this.dataGridViewTextBoxColumn5.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             // 
+            // EndDate
+            // 
+            this.EndDate.DataPropertyName = "EndDate";
+            this.EndDate.HeaderText = "EndDate";
+            this.EndDate.MinimumWidth = 8;
+            this.EndDate.Name = "EndDate";
+            // 
             // dataGridViewTextBoxColumn6
             // 
             this.dataGridViewTextBoxColumn6.DataPropertyName = "Strike";
@@ -252,11 +207,85 @@ namespace VirtualTradeSystem
             this.dataGridViewTextBoxColumn8.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             // 
+            // iDDataGridViewTextBoxColumn
+            // 
+            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            this.iDDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // tradeDatedataGridViewTextBoxColumn
+            // 
+            this.tradeDatedataGridViewTextBoxColumn.DataPropertyName = "TradeDate";
+            this.tradeDatedataGridViewTextBoxColumn.HeaderText = "TradeDate";
+            this.tradeDatedataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.tradeDatedataGridViewTextBoxColumn.Name = "tradeDatedataGridViewTextBoxColumn";
+            // 
+            // dealTypeDataGridViewTextBoxColumn
+            // 
+            this.dealTypeDataGridViewTextBoxColumn.DataPropertyName = "DealType";
+            this.dealTypeDataGridViewTextBoxColumn.HeaderText = "DealType";
+            this.dealTypeDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.dealTypeDataGridViewTextBoxColumn.Name = "dealTypeDataGridViewTextBoxColumn";
+            // 
+            // isBuyDataGridViewCheckBoxColumn
+            // 
+            this.isBuyDataGridViewCheckBoxColumn.DataPropertyName = "IsBuy";
+            this.isBuyDataGridViewCheckBoxColumn.HeaderText = "IsBuy";
+            this.isBuyDataGridViewCheckBoxColumn.MinimumWidth = 8;
+            this.isBuyDataGridViewCheckBoxColumn.Name = "isBuyDataGridViewCheckBoxColumn";
+            this.isBuyDataGridViewCheckBoxColumn.Width = 50;
+            // 
+            // lotDataGridViewTextBoxColumn
+            // 
+            this.lotDataGridViewTextBoxColumn.DataPropertyName = "Lot";
+            this.lotDataGridViewTextBoxColumn.HeaderText = "Lot";
+            this.lotDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.lotDataGridViewTextBoxColumn.Name = "lotDataGridViewTextBoxColumn";
+            this.lotDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // startDateDataGridViewTextBoxColumn
+            // 
+            this.startDateDataGridViewTextBoxColumn.DataPropertyName = "StartDate";
+            this.startDateDataGridViewTextBoxColumn.HeaderText = "StartDate";
+            this.startDateDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.startDateDataGridViewTextBoxColumn.Name = "startDateDataGridViewTextBoxColumn";
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "EndDate";
+            this.dataGridViewTextBoxColumn9.HeaderText = "EndDate";
+            this.dataGridViewTextBoxColumn9.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            // 
+            // strikeDataGridViewTextBoxColumn
+            // 
+            this.strikeDataGridViewTextBoxColumn.DataPropertyName = "Strike";
+            this.strikeDataGridViewTextBoxColumn.HeaderText = "Strike";
+            this.strikeDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.strikeDataGridViewTextBoxColumn.Name = "strikeDataGridViewTextBoxColumn";
+            // 
+            // statusDataGridViewTextBoxColumn
+            // 
+            this.statusDataGridViewTextBoxColumn.DataPropertyName = "Status";
+            this.statusDataGridViewTextBoxColumn.HeaderText = "Status";
+            this.statusDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
+            // 
+            // InitialPremium
+            // 
+            this.InitialPremium.DataPropertyName = "InitialPremium";
+            this.InitialPremium.HeaderText = "InitialPremium";
+            this.InitialPremium.MinimumWidth = 8;
+            this.InitialPremium.Name = "InitialPremium";
+            // 
             // Form1View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1159, 688);
+            this.Controls.Add(this.CalculatePVButton);
             this.Controls.Add(this.DGVIndications);
             this.Controls.Add(this.SetDealButton);
             this.Controls.Add(this.DGVTrades);
@@ -279,12 +308,14 @@ namespace VirtualTradeSystem
         private System.Windows.Forms.DataGridViewTextBoxColumn premiumDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource dealBindingSource;
         public System.Windows.Forms.DataGridView DGVIndications;
+        private System.Windows.Forms.Button CalculatePVButton;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tradeDatedataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dealTypeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn isBuyDataGridViewCheckBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn lotDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn startDateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewTextBoxColumn strikeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn InitialPremium;
@@ -294,6 +325,7 @@ namespace VirtualTradeSystem
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EndDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;

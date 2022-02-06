@@ -32,7 +32,7 @@ namespace Numeric
                 {
                     //GeoBrownian 特有の計算A, B 
                     A = xArr[i - 1] * mu;
-                    B = xArr[i - 1] * (double)market.FxSigma;
+                    B = xArr[i - 1] * (double)market.FxVolatility;
                     xArr[i] = sdeMethod.NextStep(xArr[i - 1], A, B, dwList[i], dt);
                 }
                 xArrList.Add(xArr);

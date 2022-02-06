@@ -27,9 +27,9 @@ namespace VirtualTradeSystem.Core
             //Discount to current priceMU       sdfs                
             double dcf = 1.0; // Math.Pow(1 / (1 + market.IrRateDom/100/MarketSetting.AnnualDays), (deal.StartDate - market.AsOf).Days); 
             double t = (deal.EndDate.Value - market.AsOf).TotalDays;
-            double d1 = (Math.Log((market.FxRate) / (double)deal.Strike) + (market.IrRateDom / MarketSetting.AnnualDays - market.IrRateFor / MarketSetting.AnnualDays + Math.Pow(market.FxSigma, 2) / 2) * (t)) / (market.FxSigma * Math.Sqrt(t + eps));
-            double d2 = d1 - market.FxSigma * Math.Sqrt(t);
-            double sign = deal.DealType == EnumDealType.Call ? 1.0 : -1.0;
+            double d1 = (Math.Log((market.FxRate) / (double)deal.Strike) + (market.IrRateDom / MarketSetting.AnnualDays - market.IrRateFor / MarketSetting.AnnualDays + Math.Pow(market.FxVolatility, 2) / 2) * (t)) / (market.FxVolatility * Math.Sqrt(t + eps));
+            double d2 = d1 - market.FxVolatility * Math.Sqrt(t);
+            double sign = deal.DealType == EDealType.Call ? 1.0 : -1.0;
             return deal.Lot * sign * dcf * (market.FxRate * Math.Exp(-market.IrRateFor / (MarketSetting.AnnualDays) * t) * Probability.CND(sign * d1) - (double)deal.Strike * Math.Exp(-market.IrRateDom / MarketSetting.AnnualDays * (t)) * Probability.CND(sign * d2));
 
         }

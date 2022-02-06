@@ -19,10 +19,17 @@ namespace VirtualTradeSystem
         {
             InitializeComponent();
             this.SetDealButton.Click += SetDealButtonClick;
+            this.CalculatePVButton.Click += CalculatePVButtonClick;
 
             var deal = new Deal
             {
-                TradeDate = DateTime.Parse("2020/1/1")
+                TradeDate = DateTime.Parse("2020/1/1"),
+                StartDate = DateTime.Parse("2020/1/1"),
+                EndDate = DateTime.Parse("2020/3/1"),
+                IsBuy = true,
+                Strike = 100,
+                DealType = EDealType.Call,
+                Lot = 1
             };
 
 
